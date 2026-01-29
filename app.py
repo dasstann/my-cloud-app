@@ -28,7 +28,11 @@ def index():
     cur.close()
     conn.close()
     
-    return f"<h1>Hello Cloud!</h1><p>Это посещение номер: <b>{count}</b></p>"
+    return f"""
+<h1 style='color: #FF9900;'>Hello AWS Cloud!</h1>
+<p>Это посещение номер: <b>{count}</b></p>
+<p>Статус: База данных PostgreSQL подключена и работает.</p>
+"""
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
